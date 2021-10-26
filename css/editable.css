@@ -1,0 +1,204 @@
+:root {
+    --main-bg-color: repeating-linear-gradient(#485563, #29323c);
+    --second-bg-color: linear-gradient(#485563, #29323c);  
+    --second-font-color: white;
+    --header-font-color: white;
+}
+
+body {
+    background: var(--main-bg-color);
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(#485563, black) 
+}
+
+#top-navbar-brand {
+    color: #80FF84;
+    font-size: 2rem;
+}
+
+#top-navbar-brand:hover {
+    font-weight: lighter;
+}
+
+a {
+    color: #80FF84;
+}
+
+a:hover {
+    color: green;
+}
+
+a.dark {
+    color: #80FF84;
+}
+
+a.dark:hover {
+    color: green;
+}
+
+.flex-container.intro {
+    flex-direction: row;
+    font-size: 1.25rem;
+    color: var(--second-font-color)
+}
+
+#intro {
+    margin-top: 6rem;
+}
+
+.flex-item.intro {
+    position: center;
+    min-height: 15vh;
+}
+.portfolio-header, .awards-header, .contact-header {
+    color: var(--header-font-color);
+}
+
+@media (min-width: 668px) {
+    #top-navbar-brand {
+        padding-bottom: 2vh;
+        padding-left: 14vw;
+    }
+    #main-menu {
+        padding-right: 17vw;
+    }
+    .flex-item.intro {
+        float: center;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        padding-right: 15vw;
+        padding-left: 15vw;
+    }
+    .portfolio-header {
+        padding-top: 2vh;
+        padding-left: 15vw;
+    }
+    .awards-header, .contact-header {
+        padding-left: 15vw;
+    }
+}
+
+@media (max-width: 668px) {
+    .flex-item.intro {
+        float: center;
+        padding-top: 2.5vh;
+        padding-bottom: 2.5vh;
+        padding-right: 2.5vw;
+        padding-left: 2.5vw;
+    }
+    .portfolio-header, .awards-header, .contact-header {
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        padding-left: 2.5vw;
+    }
+    .trustlogo-image {
+        width: 5rem;
+        padding-right: 1.5vw;
+    }
+}
+
+#photo-of-me-black {
+    width: 100%;
+    height: auto;
+}
+
+.flex-container.portfolio {
+    display: flex;
+    background: var(--second-bg-color);
+    color: var(--second-font-color);
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+.portfolio-image {
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  width: 10vw;
+  height: 10vw;
+}
+
+.flex-item.portfolio {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.flex-item.portfolio:hover .portfolio-image {
+  opacity: 0.7;
+}
+
+.flex-container.awards {
+    display: flex;
+    background: var(--second-bg-color);
+    color: var(--second-font-color);
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    list-style: none;
+}
+
+.flex-container.contact {
+    display: flex;
+    background: var(--second-bg-color);
+    color: var(--second-font-color);
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-top: 1vh;
+    padding-bottom: 3vh;
+    list-style: none;
+}
+
+.flex-item.contact {
+    height: 1vw;
+}
+
+.flex-container.socials {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 2rem;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.flex-container.footer {
+    display: flex;
+    padding-top: 1vw;
+    color: var(--second-font-color);
+    background: linear-gradient(#485563, black);    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-item.codedby {
+    align-self: center; 
+}
+
+.flex-item.trustlogo {
+    padding-right: 1vw;
+}
